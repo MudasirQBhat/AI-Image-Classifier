@@ -1,7 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import * as mobilenet from '@tensorflow-models/mobilenet';
-// import { image } from '@tensorflow/tfjs';
 import { BeatLoader } from 'react-spinners';
 
 
@@ -79,7 +78,7 @@ function App() {
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
         <h3 style={{fontFamily: 'monospace'}}>Model is loading</h3>
         <BeatLoader color="#000" loading={true} size={12} />
-        </div>}
+      </div>}
       {model &&  <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px', alignItems: 'center', gap: gap, flexDirection: flexDirection}}>
         <label htmlFor="file-upload" className='button'>Upload Image</label>
          <input id="file-upload" type="file" accept="image/*" onChange={handleImageChange} style={{display:'none'}}/>
